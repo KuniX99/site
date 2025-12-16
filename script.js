@@ -6,10 +6,10 @@ const scripts = [
     { title: "Murder Mystery 2 (Item Spawner)", tab: "MM2", image: "images/mm2-spawner.jpg", code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/KuniX99/MurderMystery2/refs/heads/main/spawner.lua"))()` },
     { title: "Murder Mystery 2 (Project Reverse)", tab: "MM2", image: "images/mm2-reverse.jpg", code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/KuniX99/MurderMystery2/refs/heads/main/reverse.lua"))()` },
     { title: "Ronix Hub", tab: "OTHERS", image: "images/others.jpg", code: `loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b44706178039e9b88c4d768d4d8b012f.lua"))()` },
-    { title: "Thunder Z Hub", tab: "OTHERS", image: "images/others.jpg", code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/ThundarZ/Welcome/refs/heads/main/Main/GaG/Main.lua"))()` },
-    { title: "Limit Hub", tab: "OTHERS", image: "images/others.jpg", code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/FakeModz/LimitHub/refs/heads/main/LimitHub_Luarmor_E.lua"))()` },
-    { title: "Speed Hub", tab: "OTHERS", image: "images/others.jpg", code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"))()` },
-    { title: "Quantum Hub", tab: "OTHERS", image: "images/others.jpg", code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua"))()` }
+    { title: "Thunder Z Hub", tab: "OTHERS", image: "images/others1.jpg", code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/ThundarZ/Welcome/refs/heads/main/Main/GaG/Main.lua"))()` },
+    { title: "Limit Hub", tab: "OTHERS", image: "images/others2.jpg", code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/FakeModz/LimitHub/refs/heads/main/LimitHub_Luarmor_E.lua"))()` },
+    { title: "Speed Hub", tab: "OTHERS", image: "images/others3.jpg", code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"))()` },
+    { title: "Quantum Hub", tab: "OTHERS", image: "images/others4.jpg", code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua"))()` }
 ];
 
 let currentTab = "ALL";
@@ -71,3 +71,4 @@ function setTab(t, e) {
 
 function searchScripts() { render() }
 render();
+
