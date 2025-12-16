@@ -16,13 +16,18 @@ body {
   color:var(--text);
 }
 
+/* ================= CONTAINER ================= */
 .container {
   max-width:420px;
   margin:30px auto;
   padding:18px;
 }
-@media(min-width:900px){.container{max-width:920px}}
 
+@media(min-width:900px){
+  .container{max-width:920px}
+}
+
+/* ================= HEADER ================= */
 .header {margin-bottom:18px}
 
 .brand h1 {
@@ -45,18 +50,22 @@ body {
   color:#8b6b2e;
 }
 
+/* ================= TOP LINKS ================= */
 .top-links {
   display:flex;
   gap:14px;
   margin-top:14px;
   font-weight:700;
   font-size:13px;
+  flex-wrap:wrap;
 }
+
 .top-links a {
   color:#b89a3d;
   text-decoration:none;
   position:relative;
 }
+
 .top-links a::after {
   content:"";
   position:absolute;
@@ -65,19 +74,24 @@ body {
   background:linear-gradient(90deg,var(--gold-a),var(--gold-b));
   transition:.35s var(--ease);
 }
+
 .top-links a:hover::after {width:100%}
 
+/* ================= TABS ================= */
 .game-tags {
   display:flex;
   gap:18px;
   margin:22px 0;
   font-weight:800;
+  flex-wrap:wrap;
 }
+
 .tag {
   cursor:pointer;
   color:#777;
   position:relative;
 }
+
 .tag::after {
   content:"";
   position:absolute;
@@ -86,9 +100,11 @@ body {
   background:linear-gradient(90deg,var(--gold-a),var(--gold-b));
   transition:.4s var(--ease);
 }
+
 .tag.active {color:#000}
 .tag.active::after {width:100%}
 
+/* ================= SEARCH ================= */
 .search {
   width:100%;
   padding:14px 18px;
@@ -97,23 +113,26 @@ body {
   outline:none;
   transition:.35s var(--ease);
 }
+
 .search:focus {
   border-color:var(--gold-b);
   box-shadow:0 0 0 4px rgba(201,164,76,.2);
 }
 
+/* ================= SCRIPT CARD ================= */
 .script-card {
   background:#fff;
-  border-radius:24px;
-  padding:18px;
+  border-radius:28px;
+  padding:20px;
   margin-top:16px;
   border:1px solid #f1e7c9;
   display:flex;
   justify-content:space-between;
   gap:16px;
-  animation:cardIn .7s var(--ease);
+  animation:cardIn .6s var(--ease);
   transition:.4s var(--ease);
 }
+
 .script-card:hover {
   transform:translateY(-6px) scale(1.02);
   box-shadow:0 26px 60px rgba(0,0,0,.15);
@@ -131,6 +150,7 @@ body {
   border:1px solid #eee;
 }
 
+/* ================= BUTTON ================= */
 .copy-btn {
   background:linear-gradient(135deg,var(--gold-a),var(--gold-b));
   border:none;
@@ -141,13 +161,16 @@ body {
   cursor:pointer;
   transition:.35s var(--ease);
 }
-.copy-btn:hover {transform:scale(1.1)}
 
+.copy-btn:hover {transform:scale(1.08)}
+
+/* ================= ANIMATION ================= */
 @keyframes cardIn {
   from {opacity:0;transform:translateY(20px) scale(.95)}
   to {opacity:1;transform:none}
 }
 
+/* ================= TOAST ================= */
 .toast {
   position: fixed;
   left: 50%;
@@ -162,7 +185,7 @@ body {
   opacity: 0;
   pointer-events: none;
   box-shadow: 0 16px 40px rgba(201,164,76,.45);
-  transition: all .45s cubic-bezier(.22,1,.36,1);
+  transition: all .45s var(--ease);
   z-index: 9999;
 }
 
@@ -171,3 +194,19 @@ body {
   transform: translateX(-50%) translateY(0) scale(1);
 }
 
+/* ================= MOBILE FIX (IMPORTANT) ================= */
+@media (max-width: 600px) {
+
+  .container {
+    padding-left:14px;
+    padding-right:14px;
+  }
+
+  .script-card {
+    margin-left:-10px;
+    margin-right:-10px;
+    border-radius:30px;
+    padding:22px;
+    flex-direction:column;
+  }
+}
