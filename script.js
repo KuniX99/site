@@ -51,10 +51,25 @@ function render() {
     list.innerHTML = "";
     const q = document.getElementById("search").value.toLowerCase();
 
+    /* ===== OTHERS TAB ===== */
+    if (currentTab === "OTHERS") {
+        list.innerHTML = `
+      <div class="coming-soon">
+        <h2>COMING SOON</h2>
+        <p>More scripts will be added here soon.</p>
+      </div>
+    `;
+        return;
+    }
+
     let index = 0;
+    let shown = 0;
+
     scripts.forEach((s, i) => {
         if (currentTab !== "ALL" && s.tab !== currentTab) return;
         if (!s.title.toLowerCase().includes(q)) return;
+
+        shown++;
 
         const card = document.createElement("div");
         card.className = "script-card";
@@ -63,14 +78,27 @@ function render() {
         <div class="script-title">${s.title}</div>
         <div class="status">● WORKING</div>
         <div class="script-preview">${s.code}</div>
-        <div class="script-image"><img src="${s.image}"></div>
+        <div class="script-image">
+          <img src="${s.image}">
+        </div>
       </div>
       <button class="copy-btn" data-i="${i}">Copy</button>
     `;
         list.appendChild(card);
 
-        requestAnimationFrame(() => setTimeout(() => card.classList.add("show"), index++ * 80));
+        requestAnimationFrame(() =>
+            setTimeout(() => card.classList.add("show"), index++ * 80)
+        );
     });
+
+    if (shown === 0) {
+        list.innerHTML = `
+      <div class="coming-soon">
+        <h2>NO RESULTS</h2>
+        <p>No scripts match your search.</p>
+      </div>
+    `;
+    }
 
     document.querySelectorAll(".copy-btn").forEach(b => {
         b.onclick = () => {
@@ -95,6 +123,8 @@ function setTab(t, e) {
     render();
 }
 
-function searchScripts() { render() }
+function searchScripts() {
+    render();
+}
 
 render();
