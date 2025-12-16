@@ -265,3 +265,18 @@ body{
     align-self:flex-end;
   }
 }
+.coming-soon{
+  text-align:center;
+  padding:80px 20px;
+  opacity:.85;
+}
+
+.coming-soon h2{
+  font-size:32px;
+  font-weight:900;
+}
+
+.coming-soon p{
+  margin-top:10px;
+  color:var(--text-soft);
+}
