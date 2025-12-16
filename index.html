@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kuni Hub Scripts</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- MAIN STYLE -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- FONT (optional but recommended) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div class="container">
 
-  <!-- HEADER -->
+  <!-- ================= HEADER ================= -->
   <header class="header">
     <div class="brand">
       <h1>Kuni Hub</h1>
       <span class="badge">Clean • Smooth • Tested Scripts</span>
     </div>
 
-    <!-- TOP LINKS -->
+    <!-- SOCIAL LINKS -->
     <nav class="top-links">
-      <a href="#">Discord</a>
-      <a href="#">YouTube</a>
-      <a href="#">Facebook</a>
-      <a href="#">Instagram</a>
+      <a href="https://discord.gg/fvWTbRZFTV" target="_blank">Discord</a>
+      <a href="https://youtube.com/@kunihubscripts" target="_blank">YouTube</a>
+      <a href="https://tiktok.com/@kunikonikuni" target="_blank">TikTok</a>
+      <a href="https://www.instagram.com/kuniscripts" target="_blank">Instagram</a>
     </nav>
   </header>
 
-  <!-- GAME TAGS -->
+  <!-- ================= GAME TABS ================= -->
   <nav class="game-tags">
     <span class="tag active" onclick="setTab('ALL', this)">All</span>
     <span class="tag" onclick="setTab('ADM', this)">Adopt Me</span>
@@ -34,14 +39,21 @@
     <span class="tag" onclick="setTab('OTHERS', this)">Others</span>
   </nav>
 
-  <!-- SEARCH -->
-  <input class="search" id="search" placeholder="Search scripts..." onkeyup="searchScripts()">
+  <!-- ================= SEARCH ================= -->
+  <input
+    class="search"
+    id="search"
+    placeholder="Search scripts..."
+    onkeyup="searchScripts()"
+  />
 
-  <!-- LIST -->
+  <!-- ================= SCRIPT LIST ================= -->
   <div id="script-list"></div>
 
 </div>
 
+<!-- MAIN SCRIPT -->
 <script src="script.js"></script>
+
 </body>
 </html>
