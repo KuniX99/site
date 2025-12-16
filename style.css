@@ -1,5 +1,4 @@
 *{box-sizing:border-box}
-
 :root{
 --gold-a:#f3d98b;
 --gold-b:#c9a44c;
@@ -18,10 +17,6 @@ color:var(--text);
 max-width:920px;
 margin:24px auto;
 padding:16px;
-}
-
-@media(max-width:700px){
-.container{max-width:100%}
 }
 
 .brand h1{
@@ -52,10 +47,7 @@ font-size:13px;
 font-weight:700;
 }
 
-.top-links a{
-color:#b89a3d;
-text-decoration:none;
-}
+.top-links a{color:#b89a3d;text-decoration:none}
 
 .game-tags{
 display:flex;
@@ -65,11 +57,7 @@ font-weight:800;
 flex-wrap:wrap;
 }
 
-.tag{
-cursor:pointer;
-color:#777;
-}
-
+.tag{cursor:pointer;color:#777}
 .tag.active{color:#000}
 
 .search{
@@ -84,27 +72,24 @@ outline:none;
 background:#fff;
 border-radius:22px;
 padding:16px;
-margin-top:16px;
+margin-top:18px;
 border:1px solid #f1e7c9;
 display:flex;
 gap:14px;
 justify-content:space-between;
+animation:fade .4s var(--ease);
 }
 
-.script-left{
-flex:1;
-min-width:0;
+@keyframes fade{
+from{opacity:0;transform:translateY(10px)}
+to{opacity:1;transform:none}
 }
 
-.script-title{
-font-weight:800;
-font-size:14px;
-}
+.script-left{flex:1;min-width:0}
 
-.status{
-font-size:12px;
-color:#2ecc71;
-}
+.script-title{font-weight:800;font-size:14px}
+
+.status{font-size:12px;color:#2ecc71}
 
 .script-preview{
 margin-top:8px;
@@ -113,15 +98,31 @@ border-radius:14px;
 padding:10px;
 font-size:12px;
 border:1px solid #eee;
-word-break:break-word;
 white-space:pre-wrap;
+word-break:break-word;
+}
+
+.script-image{
+margin-top:12px;
+border-radius:16px;
 overflow:hidden;
+border:1px solid #eee;
+}
+
+.script-image img{
+width:100%;
+display:block;
+transition:.35s var(--ease);
+}
+
+.script-image img:hover{
+transform:scale(1.04);
 }
 
 .copy-btn{
 background:linear-gradient(135deg,var(--gold-a),var(--gold-b));
 border:none;
-padding:10px 16px;
+padding:10px 18px;
 border-radius:14px;
 color:#fff;
 font-weight:900;
@@ -129,13 +130,11 @@ cursor:pointer;
 height:fit-content;
 }
 
+.copy-btn.copied{opacity:.6}
+
 @media(max-width:700px){
-.script-card{
-flex-direction:column;
-}
-.copy-btn{
-align-self:flex-end;
-}
+.script-card{flex-direction:column}
+.copy-btn{align-self:flex-end}
 }
 
 .toast{
