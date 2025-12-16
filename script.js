@@ -15,12 +15,6 @@ const scripts = [
     tab: "ADM",
     code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/KuniX99/AdoptMe/refs/heads/main/spawnerv1.lua"))()`
   },
-  {
-    title: "Adopt Me (Pet Spawner V2)",
-    tab: "ADM",
-    code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/KuniX99/AdoptMe/refs/heads/main/spawnerv2.lua"))()`
-  },
-
   // ================= MM2 =================
   {
     title: "Murder Mystery 2 (Autofarm)",
@@ -37,11 +31,7 @@ const scripts = [
     tab: "MM2",
       code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/KuniX99/MurderMystery2/refs/heads/main/reverse.lua"))()`
   },
-  {
-    title: "Murder Mystery 2 (Infinite Snow Flakes)",
-    tab: "MM2",
-      code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/KuniX99/MurderMystery2/refs/heads/main/flakes.lua"))()`
-  },
+ 
 
   // ================= OTHERS =================
   {
@@ -186,3 +176,4 @@ function searchScripts() {
 render();
 
 render();
+
