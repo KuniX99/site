@@ -3,7 +3,6 @@
 :root{
   --gold-a:#f6dd9a;
   --gold-b:#c9a44c;
-
   --blue-a:#4f7cff;
 
   --bg-main:#0b0f1a;
@@ -31,6 +30,19 @@ body{
   max-width:960px;
   margin:28px auto;
   padding:18px;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:32px;
+}
+
+.header-left{
+  flex:1;
 }
 
 .brand h1{
@@ -77,6 +89,23 @@ body{
   border-color:var(--gold-b);
 }
 
+/* ================= LOGO ================= */
+
+.header-logo{
+  width:150px;
+  height:150px;
+  object-fit:contain;
+  filter:drop-shadow(0 0 22px rgba(79,124,255,.65));
+  animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-6px)}
+}
+
+/* ================= TABS ================= */
+
 .game-tags{
   display:flex;
   gap:22px;
@@ -106,6 +135,8 @@ body{
   border-radius:3px;
 }
 
+/* ================= SEARCH ================= */
+
 .search{
   width:100%;
   padding:16px 20px;
@@ -115,6 +146,8 @@ body{
   color:var(--text-main);
   outline:none;
 }
+
+/* ================= SCRIPT CARD ================= */
 
 .script-card{
   background:linear-gradient(180deg,var(--bg-card),#020617);
@@ -167,7 +200,11 @@ body{
   transition:.4s var(--ease);
 }
 
-.script-image img:hover{transform:scale(1.05)}
+.script-image img:hover{
+  transform:scale(1.05);
+}
+
+/* ================= BUTTON ================= */
 
 .copy-btn{
   background:linear-gradient(135deg,var(--gold-a),var(--gold-b));
@@ -183,6 +220,8 @@ body{
 .copy-btn:hover{transform:translateY(-2px)}
 .copy-btn:active{transform:scale(.95)}
 .copy-btn.copied{opacity:.6}
+
+/* ================= TOAST ================= */
 
 .toast{
   position:fixed;
@@ -204,8 +243,25 @@ body{
   transform:translate(-50%,0);
 }
 
+/* ================= MOBILE ================= */
+
 @media(max-width:700px){
-  .script-card{flex-direction:column}
-  .copy-btn{align-self:flex-end}
+  .header{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .header-logo{
+    width:120px;
+    height:120px;
+    align-self:flex-end;
+  }
+
+  .script-card{
+    flex-direction:column;
+  }
+
+  .copy-btn{
+    align-self:flex-end;
+  }
 }
-  
