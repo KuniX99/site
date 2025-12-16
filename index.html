@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuni Hub Scripts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="brand">
+      <h1>Kuni Hub</h1>
+      <span class="badge">Clean • Smooth • Tested Scripts</span>
+    </div>
+
+    <!-- TOP LINKS -->
+    <nav class="top-links">
+      <a href="#">Discord</a>
+      <a href="#">YouTube</a>
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+    </nav>
+  </header>
+
+  <!-- GAME TAGS -->
+  <nav class="game-tags">
+    <span class="tag active" onclick="setTab('ALL', this)">All</span>
+    <span class="tag" onclick="setTab('ADM', this)">Adopt Me</span>
+    <span class="tag" onclick="setTab('MM2', this)">Murder Mystery 2</span>
+    <span class="tag" onclick="setTab('OTHERS', this)">Others</span>
+  </nav>
+
+  <!-- SEARCH -->
+  <input class="search" id="search" placeholder="Search scripts..." onkeyup="searchScripts()">
+
+  <!-- LIST -->
+  <div id="script-list"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
