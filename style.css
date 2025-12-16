@@ -19,6 +19,8 @@
   --ease:cubic-bezier(.22,1,.36,1);
 }
 
+/* ================= BASE ================= */
+
 body{
   margin:0;
   background:radial-gradient(1200px 500px at top,#111827,var(--bg-main));
@@ -39,6 +41,7 @@ body{
   justify-content:space-between;
   align-items:center;
   gap:32px;
+  position:relative;
 }
 
 .header-left{
@@ -64,6 +67,8 @@ body{
   background:#020617;
   border:1px solid var(--border);
 }
+
+/* ================= TOP LINKS ================= */
 
 .top-links{
   display:flex;
@@ -173,7 +178,11 @@ body{
 
 .script-title{font-weight:800;font-size:14px}
 
-.status{font-size:12px;color:#22c55e;font-weight:700}
+.status{
+  font-size:12px;
+  color:#22c55e;
+  font-weight:700;
+}
 
 .script-preview{
   margin-top:8px;
@@ -243,18 +252,29 @@ body{
   transform:translate(-50%,0);
 }
 
-/* ================= MOBILE ================= */
+/* ================= MOBILE (IMPORTANT FIX) ================= */
 
-@media(max-width:700px){
+@media (max-width:700px){
   .header{
-    flex-direction:column;
     align-items:flex-start;
+    padding-top:6px;
   }
 
+  /* LOGO SA RED CIRCLE AREA */
   .header-logo{
-    width:120px;
-    height:120px;
-    align-self:flex-end;
+    position:absolute;
+    top:6px;
+    right:10px;
+
+    width:90px;
+    height:90px;
+
+    margin:0;
+    animation:float 4s ease-in-out infinite;
+  }
+
+  .header-left{
+    padding-right:100px; /* space para di matabunan ng logo */
   }
 
   .script-card{
@@ -264,19 +284,4 @@ body{
   .copy-btn{
     align-self:flex-end;
   }
-}
-.coming-soon{
-  text-align:center;
-  padding:80px 20px;
-  opacity:.85;
-}
-
-.coming-soon h2{
-  font-size:32px;
-  font-weight:900;
-}
-
-.coming-soon p{
-  margin-top:10px;
-  color:var(--text-soft);
 }
