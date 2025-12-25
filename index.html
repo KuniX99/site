@@ -1,62 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kuni Hub Scripts</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuni Hub Scripts</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <!-- HEADER -->
-        <header class="header">
-            <div class="header-left">
-                <div class="brand">
-                    <h1>Kuni Hub Scripts</h1>
-                    <span class="badge">Best Roblox Scripts</span>
-                </div>
+  <!-- HERO -->
+  <section class="hero">
+    <img src="images/kuni-logo.png" class="hero-logo" alt="Kuni Hub Logo">
+    <h1>Kuni Hub Scripts</h1>
+    <p>Trusted & Working Roblox Scripts</p>
 
-                <nav class="top-links">
-                    <a href="https://discord.gg/fvWTbRZFTV" target="_blank">Discord</a>
-                    <a href="https://youtube.com/@kunihubscripts" target="_blank">YouTube</a>
-                    <a href="https://tiktok.com/@kunikonikuni" target="_blank">TikTok</a>
-                    <a href="https://www.instagram.com/kuniscripts" target="_blank">Instagram</a>
-                </nav>
-            </div>
+    <input id="search" class="search" placeholder="Search scripts..." onkeyup="searchScripts()">
+  </section>
 
-            <!-- TOP RIGHT LOGO -->
-            <img src="images/kuni-logo.png" class="header-logo" alt="Kuni Hub Logo">
-        </header>
+  <!-- TABS -->
+  <nav class="game-tags">
+    <span class="tag active" onclick="setTab('ALL',this)">All</span>
+    <span class="tag" onclick="setTab('ADM',this)">Adopt Me</span>
+    <span class="tag" onclick="setTab('MM2',this)">Murder Mystery 2</span>
+    <span class="tag" onclick="setTab('OTHERS',this)">Others</span>
+  </nav>
 
-        <!-- TABS -->
-        <nav class="game-tags">
-            <span class="tag active" onclick="setTab('ALL',this)">All</span>
-            <span class="tag" onclick="setTab('ADM',this)">Adopt Me</span>
-            <span class="tag" onclick="setTab('MM2',this)">Murder Mystery 2</span>
-            <span class="tag" onclick="setTab('OTHERS',this)">Others</span>
-        </nav>
+  <!-- SCRIPTS -->
+  <div id="script-list"></div>
 
-        <!-- SEARCH -->
-        <input id="search"
-               class="search"
-               placeholder="Search scripts..."
-               onkeyup="searchScripts()">
-
-        <!-- SCRIPT LIST -->
-        <div id="script-list"></div>
-
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="https://discord.gg/fvWTbRZFTV" target="_blank">Discord</a>
+      <a href="https://youtube.com/@kunihubscripts" target="_blank">YouTube</a>
+      <a href="https://tiktok.com/@kunikonikuni" target="_blank">TikTok</a>
     </div>
+    <p>© Kuni Hub — Trusted Roblox Scripts</p>
+  </footer>
 
-    <!-- IMAGE MODAL (SAFE EVEN IF UNUSED) -->
-    <div class="image-modal" id="imageModal" onclick="closeImage && closeImage()">
-        <img id="modalImg">
-    </div>
+</div>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
-
